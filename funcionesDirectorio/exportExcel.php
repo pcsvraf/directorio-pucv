@@ -6,7 +6,7 @@ header("Content-Disposition: attachment; filename= directorio.xls");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-$connect = mysqli_connect("localhost", "udb_directorio", "t2OVv3Dd", "db_directorio");
+$connect = mysqli_connect("localhost", "pcspucv_dir", "Z?Z25Kjy7sevc#13", "pcspucv_dir");
 mysqli_set_charset($connect, "utf8");
 $output = '';
 

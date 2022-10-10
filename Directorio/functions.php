@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "udb_directorio", "t2OVv3Dd", "db_directorio");
+$connect = mysqli_connect("localhost", "pcspucv_dir", "Z?Z25Kjy7sevc#13", "pcspucv_dir");
  if(isset($_POST["Import"])){
 
     $filename=$_FILES["file"]["tmp_name"];

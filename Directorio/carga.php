@@ -20,7 +20,7 @@
                           </div>
                             <label class="col-sm-2 control-label" for="filebutton">Seleccione Archivo .csv</label>
                             <div class="col-sm-3">
-                                <input type="file" name="file" id="file" class="input-large">
+                                <input type="file" name="file" id="file" class="input-large" accept=".csv">
                             </div>
                             <div class="col-sm-3">
                             </div>

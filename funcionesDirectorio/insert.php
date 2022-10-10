@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "udb_directorio", "t2OVv3Dd", "db_directorio");
+$connect = mysqli_connect("localhost", "pcspucv_dir", "Z?Z25Kjy7sevc#13", "pcspucv_dir");
 //obteniendo datos desde el formulario en la tabla
 if(isset($_POST["nombre"],  $_POST["email"], $_POST["telefono"], $_POST["cargo"], $_POST["nom_area"]))
 {
@@ -29,8 +29,16 @@ $delimitador=explode(" ", $carg);
 $d= $delimitador[0];//primera palabra de cargo
 $s= $delimitador[1];
 
-if (substr($d,-1)=="a"){
+if (substr($d,-1)=="a" && $d!=="Jefa" && $d!=="Decana" && $d!=="Secretaria" && $d!=="Contralora"){
   $d= substr($d,0,-1);
+}else if ($d==="Decana"){
+  $d="Decano y Consejeros Superiores";
+}else if ($d==="Jefa"){
+  $d="Jefe";
+}else if ($d==="Secretaria"){
+  $d="Secretario";
+}else if ($d==="Contralora"){
+  $d="Contralor";
 }
 $nuevita="SELECT id FROM jerarquia WHERE jerarq='".$d."'";
 $id_jerarq = mysqli_query($connect,$nuevita);
